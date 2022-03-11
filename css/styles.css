@@ -1,0 +1,359 @@
+/* ESTILOS GLOBALES:
+Primero vamos a añadir algunos estilos globales. Haciendo esto, también, quitaremos los estilos por defecto
+que el navegador agrega automáticamente.
+
+También, al principio vamos a diseñar para los dispositivos móviles (pantalla pequeña). Luego, podemos ajustar
+nuestros estlos para tamaños de pantalla más grandes.
+*/
+
+/* *{
+    margin: 0;
+} */
+
+
+html{
+    font-size: 10px;
+    /* realmente las unidades de medida rem se calculan respecto al elemento raíz que es la etiqueta 
+    HTML así que establecí aquí el font-size */
+    /* width: 100vw; */
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px; 
+    /* ¿Por qué el profesor utiliza mediads absolutas y no relativas? 
+    Se estableción así por practicidad, porque es más fácil calcular las medidas con múltiplos de 10.
+    Si en los elementos hijos del body utilizamos rem para medir, nos basaremos en esos 10px*/
+    margin: 0 auto;
+
+    width: 100%;
+
+    text-align: center; 
+    /* Lo ponemos centrado porque primero vamos a diseñar para celulares, luego, utilizando
+    media-queris podemos cambiar esto para pantallas más grandes */
+    overflow-x: hidden;
+    max-width: 1200px;
+}
+
+img{
+    max-width: 90vw;
+    box-sizing: border-box;
+    /* esta propiedad la puse yo */
+}
+
+ul{
+    list-style: none; 
+    /* con esto retiramos los circulitos que aparecen antes de cada ítem de nuestra lista */
+    margin: 0;
+    padding: 0;
+    /* si nos fijamos, nuestra lista no está del todo centrada, esto es porque, los ítems de una, lista, por
+    defecto, tinen un padding que no es cero, así que vamos a definir que el padding sea cero para que
+    se centre. También vamos a remover las márgenes */
+}
+
+a{
+    text-decoration: none; 
+    /* esta propiedad sirve para quitarle la decoración que pueda traer el texto por 
+    defecto, en este caso nos sirve para quitarle el subrayado a las etiquetas de enlace*/
+    color: inherit;
+    /* recordemos que "inherit" se utiliza para hacer que el elemento herede las propiedades del padre.
+    En este caso, lo hacemos para que los enlaces no tengan ese color azul característico */
+}
+
+
+/*  SECCIÓN DEL HEADER*/
+
+header{
+    background-color: #EEECEB;
+    padding: 1rem;
+    height: 100vh;
+}
+
+nav ul{
+    font-size: 1.8rem;
+    display: flex;
+    /* después se definirá esto mejor, pero por ahora, flex se utiliza para establecer contenidos en
+    una dirección ya sea horizontalmente (por defecto) o verticalmente */
+    justify-content: center;
+    /*propiedad de CSS flex, sirve para centrar el contenido*/
+}
+
+nav li{
+    margin: 0 1rem
+}
+
+header h1{
+    font-size: 5rem;
+}
+
+header p{
+    font-size: 2rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid lightgray;
+}
+
+.rotar{
+    margin-top: 2rem;
+    font-size: 3rem;
+    opacity: 0.4;
+}
+
+
+/* SECCIÓN EFECTO PARALAJE */
+
+.paralaje{
+    background-image: url("../img/teclado.jpg");
+    height: 100vh;
+    background-position: center;
+    /* esto de centrar la imagen no es necesario, solo es porque queremos que se vea justamete el 
+    pedazo del centro*/
+    background-size: cover;
+    background-attachment: fixed;
+    /* esta es la propiedad que nos permite tener ese efecto de paralaje */
+}
+
+.paralaje ul{
+    font-size: 3rem;
+    padding: 1rem;
+}
+
+.paralaje li{
+    margin: 2rem 0;
+    color: white;
+}
+
+
+/* SECCIÓN PROYECTOS RECIENTES */
+
+#seccion-proyectos-recientes{
+    margin-top: 5rem;
+}
+
+.proyectos-recientes{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.proyectos-recientes-titulo{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.proyectos-recientes-texto{
+    padding: 1rem;
+}
+
+.proyectos-recientes p{
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.proyectos-recientes .descripcion{
+    text-align: center;
+}
+
+.proyectos-recientes-texto h4{
+    font-size: 1.8rem;
+}
+
+
+
+
+/* SECCIÓN DE CONTACTO */
+
+#contacto{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: 100vh;
+    background-color: #b1e2d7;
+    color: white;
+}
+
+.contacto-titulo{
+    margin: 0;
+    font-size: 5rem;
+}
+
+.contacto-texto{
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+#contacto .rotar{
+    display: none;
+    /* aquí le estamos diciendo a ese texto que no se muestre. Esto es porque en la versión para celular
+    no queremos que se muestre. Luego podemos modificar esto para que el texto sí se muestre para tamaños
+    de pantalla más grandes */
+}
+
+
+/* PÁGINA DE PROYECTOS */
+
+.proyectos-titulo{
+    font-size: 1.6rem;
+}
+
+.proyectos-titulo h3{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+}
+
+.proyectos{
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-item{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: slategrey;
+    position: relative;
+}
+
+.grid-item img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* EFECTO FLOTANTE */
+
+.texto-escondido{
+    display: none;
+}
+
+.grid-item:hover > .texto-escondido{
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-item:hover img{
+    filter: brightness(0.3);
+    transform: scale(1.01);
+}
+
+
+/* PARA TAMAÑOS DE PANTALLA DE 860px DE ANCHO O MÁS */
+
+@media (min-width: 750px){
+    nav ul{
+        justify-content: flex-end;
+        /* esta propiedad es para que el contenido se alinee a la izquierda */
+    }
+
+    .rotar{
+        margin: 2rem 0 0 0;
+        writing-mode: vertical-lr;
+        /* esto hará que el contenido sea vertical de izquerda a derecha */
+        text-orientation: upright;
+        /* podemos hacer uso de esta propiedad cuando el modo de escritura está configurado en vertical
+        (como lo hicimos en la propiedad anerior) para que las letras se pongan también verticales */
+        font-size: 5rem;
+    }
+
+    header{
+        height: 100%;
+    }
+
+    .proyectos-recientes{
+        flex-direction: row;
+    }
+
+    .proyectos-recientes-texto{
+        flex: 2;
+        padding: 1rem;
+    }
+
+    .proyectos-recientes-img{
+        flex: 3;
+        border: lightgray 1rem solid;
+    }
+
+    .proyectos-recientes-img img{
+        width: 100%;
+        height: 100%;
+        /* cuando estamos trabajando con imágenes, es muy importante establecer que tanto el alto como el ancho
+        sean el 100% del contenedor para poder que la propiedad flex funcione. Ya que si por ejemplo las
+        imágenes son demasiado grandes van a ocupar demasiado espacio*/
+    }
+
+    .mover-derecha{
+        order: 1;
+    }
+
+    .contacto-titulo{
+        margin: 0;
+        font-size: 8rem;
+    }
+
+    #contacto{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    #contacto .rotar{
+        display: block;
+    }
+
+    /* PÁGINA DE PROYECTOS (para tamaños de pantalla medianos) */
+
+    .proyectos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .grid-item{
+        flex-basis: 45%;
+    }
+
+}
+
+
+/* ANIMACIONES PERSONALIZADAS */
+
+.animacion-desvanecer{
+    opacity: 0;
+    animation: desvanecer ease-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.retraso-1{
+    animation-delay: 0.5s;
+}
+
+.retraso-2{
+    animation-delay: 1.5s;
+}
+
+@keyframes desvanecer{
+    to{ opacity: 1; }
+}
+
+/* PARA ANCHOS DE PANTALLA DE 1000px O MÁS */
+
+@media (min-width: 1000px){
+
+    .proyectos{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    .grid-item{
+        margin: 0;
+    }
+}

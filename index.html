@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Portafolio de Luisa</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+            </ul>
+        </nav>
+        <h1 class="animacion-desvanecer retraso-1">Hola, soy Luisa</h1>
+        <p class="animacion-desvanecer retraso-2">Desarrollo web</p>
+        <h3 class="rotar">I make things</h3>
+        <!-- al parecer, más adelante haremos que algunos elementos roten -->
+    </header>
+
+    <section class="paralaje">
+        <ul>
+            <li data-aos="flip-up" data-aos-delay="0" data-aos-duration="1000">Desarrollo web</li>
+            <li data-aos="flip-up" data-aos-delay="100" data-aos-duration="1000">HTML</li>
+            <li data-aos="flip-up" data-aos-delay="200" data-aos-duration="1000">CSS</li>
+            <li data-aos="flip-up" data-aos-delay="300" data-aos-duration="1000">JavaScript</li>
+            <li data-aos="flip-up" data-aos-delay="400" data-aos-duration="1000">Python</li>
+            <li data-aos="flip-up" data-aos-delay="500" data-aos-duration="1000">PHP</li>
+            <li data-aos="flip-up" data-aos-delay="600" data-aos-duration="1000">Java</li>
+            <li data-aos="flip-up" data-aos-delay="700" data-aos-duration="1000">MySQL</li>
+        </ul>
+    </section>
+
+    <section id="seccion-proyectos-recientes">
+        <h3 class="proyectos-recientes-titulo">Proyectos recientes</h3>
+        <hr>
+        <div class="proyectos-recientes">
+            <div class="proyectos-recientes-texto mover-derecha">
+                <div data-aos="fade-in" data-aos-duration="1000">
+                    <h4 data-aos="slide-left" data-aos-duration="1000">Título del proyecto</h4>
+                    <p class="descripcion">Pequeña descripción</p>
+                    <hr>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem, doloribus itaque nihil
+                        deleniti
+                        eligendi, odit quaerat tenetur ducimus soluta reprehenderit. Nihil dignissimos provident non
+                        autem,
+                        quas minima earum fuga! Lorem ipsum dolor sit amet consectetur, adipisicing elit. In expedita
+                        mollitia quibusdam quia voluptate commodi culpa vel, similique, qui sit facere non sed totam
+                        fuga accusamus soluta optio est eos!
+                    </p>
+                </div>
+            </div>
+            <div class="proyectos-recientes-img" data-aos="fade-in" data-aos-duration="1500">
+                <img src="img/bebe-raton.jpg" alt="Ratón bebé">
+            </div>
+        </div>
+        <div class="proyectos-recientes">
+            <div class="proyectos-recientes-texto">
+                <h4 data-aos="slide-right" data-aos-duration="1000">Título del proyecto</h4>
+                <div data-aos="fade-in" data-aos-duration="1000">
+                    <p class="descripcion">Pequeña descripción</p>
+                    <hr>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque rem, doloribus itaque nihil
+                        deleniti
+                        eligendi, odit quaerat tenetur ducimus soluta reprehenderit. Nihil dignissimos provident non
+                        autem,
+                        quas minima earum fuga! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam sit in
+                        odit minus aspernatur doloremque quasi libero, eius dolor soluta et asperiores, neque
+                        consectetur, quia dolores quidem corrupti provident at.
+                    </p>
+                </div>
+            </div>
+            <div class="proyectos-recientes-img" data-aos="fade-in" data-aos-duration="1500">
+                <img src="img/pajaro-amarillo.jpg" alt="Pájaro amarillo">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="contacto-informacion">
+            <p lang="en" class="contacto-titulo" data-aos="slide-up" data-aos-duration="1500">Don't be a <br> stranger
+            </p>
+            <p class="contacto-texto" data-aos="slide-right" data-aos-delay="300" data-aos-duration="1500">¿Necesitas un
+                desarrollador? Contáctame</p>
+            <p class="contacto-texto" data-aos="slide-right" data-aos-delay="400" data-aos-duration="1500">
+                luisa.parra.10a@gmail.com</p>
+        </div>
+        <h3 class="rotar">Contacto</h3>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
